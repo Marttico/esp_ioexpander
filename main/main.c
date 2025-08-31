@@ -10,6 +10,7 @@
 #include "freertos/FreeRTOS.h"
 #include "freertos/task.h"
 #include "esp_ioexpander.h"
+#include "esp_mics6814.h"
 
 #define I2C_MASTER_SCL_IO           22        // SCL pin
 #define I2C_MASTER_SDA_IO           21        // SDA pin
@@ -17,7 +18,7 @@
 void app_main(void)
 {
     printf("Hello world!\n");
-    ioexpander_init(0x19, I2C_MASTER_SCL_IO,I2C_MASTER_SDA_IO);
+    esp_mics6814_init(I2C_MASTER_SCL_IO,I2C_MASTER_SDA_IO);
     vTaskDelay(pdMS_TO_TICKS(1000));
     esp_restart();
 }
