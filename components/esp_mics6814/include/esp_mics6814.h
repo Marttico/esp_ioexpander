@@ -7,5 +7,6 @@
 #include "esp_log.h"
 #include "esp_ioexpander.h"
 
-esp_err_t esp_mics6814_init(uint8_t pin_scl, uint8_t pin_sda);
+esp_err_t mics6814_init(uint8_t pin_scl, uint8_t pin_sda);
 
+esp_err_t mics6814_set_led(uint8_t r, uint8_t g, uint8_t b);

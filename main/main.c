@@ -18,7 +18,7 @@
 void app_main(void)
 {
     printf("Hello world!\n");
-    esp_mics6814_init(I2C_MASTER_SCL_IO,I2C_MASTER_SDA_IO);
+    mics6814_init(I2C_MASTER_SCL_IO,I2C_MASTER_SDA_IO);
     vTaskDelay(pdMS_TO_TICKS(1000));
     esp_restart();
 }

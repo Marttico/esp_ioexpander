@@ -48,3 +48,23 @@ esp_err_t ioexpander_init(uint8_t dev_addr, uint8_t pin_scl, uint8_t pin_sda){
     ioexpander_initialized = true;
     return ESP_OK;
 }
+
+esp_err_t set_gpio_direction(enum gpio_prefix_t p_value, uint8_t suffix_p, bool m1, bool m2){
+    // Implement this
+}
+
+esp_err_t set_gpio(enum gpio_prefix_t p_value, uint8_t suffix_p, bool value){
+    // Implement this
+
+    /*
+    uint8_t state_msg[2] = {0x50, pin};
+    if(state){
+        state_msg[1] |= 0b1000;
+    }else {
+        state_msg[1] |= 0b0000;
+        
+    }
+
+    i2c_master_transmit(mics_dev_handle, state_msg, sizeof(state_msg), -1);
+    */
+}
